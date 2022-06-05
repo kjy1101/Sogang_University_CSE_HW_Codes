@@ -1,0 +1,33 @@
+<시스템프로그래밍 프로젝트1>
+20191578 김재연
+
+[ 컴파일 및 실행방법 ]
+1. 실행 시 필요한 파일
+	- 20191578.c
+	- 20191578.h
+	- opcode.txt
+	- Makefile
+2. make 를 입력하면 컴파일된다.
+3. ./20191578.out 를 입력하면 실행된다.
+4. 입력 프롬프트에 명령어들을 입력하여 테스트한다.
+5. make clean을 입력하면 생성된 실행파일(*.out)을 지울 수 있다.
+
+<시스템프로그래밍 프로젝트2>
+추가된 명령어 - type, assemble, symbol
+실행 시 추가적으로 필요한 파일 - asm파일
+위의 프로젝트1에서 기술한 것과 같은 방법으로 컴파일한 후 실행한다.
+'assemble filename' 입력으로 asm 파일을 assemble하고,
+'type filename' 입력으로 만들어진 lst, obj 파일을 읽을 수 있다.
+성공적으로 끝난 assemble 과정에서 만들어진 symbol table은 'symbol' 입력을 통해 볼 수 있다.
+assemble이 실패하면 lst, obj 파일은 만들어지지 않고, symbol table은 가장 최근에 assemble에 성공했던 파일의 symbol table로 남아있다.
+
+<시스템프로그래밍 프로젝트3>
+추가된 명령어 - loader, bp, run
+실행 시 추가적으로 필요한 파일
+	-proga.obj
+	-progb.obj
+	-progc.obj
+	-copy.obj
+loader는 프로그램을 메모리에 올리는 명령어다. obj파일을 3개까지 올릴 수 있다. 프로그램이 제대로 load됐는지는 dump 출력을 통해 확인할 수 있다.
+bp는 breakpoint를 설정하는 명령어로 새로운 breakpoint를 만들거나, 존재하는 breakpoint들을 모두 지우거나 출력할 수 있다.
+run은 loading된 프로그램이 실행되면서 변하는 레지스터값을 보여준다. 프로그램의 흐름에 따라 가장 가까운 breakpoint에서 멈춰 디버깅할 수 있다.

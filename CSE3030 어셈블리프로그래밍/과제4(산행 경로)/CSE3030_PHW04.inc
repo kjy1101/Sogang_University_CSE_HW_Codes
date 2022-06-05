@@ -1,0 +1,12 @@
+.data
+TN DWORD 4
+
+CASE DWORD 6
+
+HEIGHT DWORD 6, 4, 1, 1, 3, 4
+		DWORD 8
+		DWORD 3, 4, 4, 11, 1, 20, 12, 1
+		DWORD 10
+		DWORD 8, 9, 33, 43, 14, 19, 23, 23, 24, 50
+		DWORD 10
+		DWORD 10,  7,  3,  10,  12,  10,  6,  6,  1

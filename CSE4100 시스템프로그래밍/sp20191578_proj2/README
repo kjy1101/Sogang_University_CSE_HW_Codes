@@ -1,0 +1,23 @@
+<시스템프로그래밍 프로젝트1>
+20191578 김재연
+
+[ 컴파일 및 실행방법 ]
+1. 실행 시 필요한 파일
+	- 20191578.c
+	- 20191578.h
+	- opcode.txt
+	- Makefile
+2. make 를 입력하면 컴파일된다.
+3. ./20191578.out 를 입력하면 실행된다.
+4. 입력 프롬프트에 명령어들을 입력하여 테스트한다.
+5. make clean을 입력하면 생성된 실행파일(*.out)을 지울 수 있다.
+
+<시스템프로그래밍 프로젝트2>
+추가된 명령어 - type, assemble, symbol
+실행 시 추가적으로 필요한 파일 - asm파일
+위의 프로젝트1에서 기술한 것과 같은 방법으로 컴파일한 후 실행한다.
+'assemble filename' 입력으로 asm 파일을 assemble하고,
+'type filename' 입력으로 만들어진 lst, obj 파일을 읽을 수 있다.
+성공적으로 끝난 assemble 과정에서 만들어진 symbol table은 'symbol' 입력을 통해 볼 수 있다.
+assemble이 실패하면 lst, obj 파일은 만들어지지 않고, symbol table은 가장 최근에 assemble에 성공했던 파일의 symbol table로 남아있다.
+

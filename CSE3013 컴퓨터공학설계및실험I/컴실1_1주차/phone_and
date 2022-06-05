@@ -1,0 +1,25 @@
+#!/bin/bash
+
+var=$(echo $* | sed 's/ /.*/g')
+#com="$var|$2.*$1"
+
+com=""
+for arg in $*
+do
+	com="$arg $com"
+done
+
+com=$(echo $com | sed 's/ /.*/g')
+#echo $com
+var="$var $com"
+var=$(echo $var | sed 's/ /|/g')
+#echo $var
+
+if [ $# -eq 0 ]
+then
+	echo "Usage: phone searchfor [...searchfor]"
+	echo "(You didn't tell me what you want to search for.)"
+else
+	cat data | egrep -i "$var" | awk 'BEGIN {FS="|"}; {print "---------->" "\nname: " $1 "\naddress: " $2 "\nphone: " $3 "\n<----------" }'
+fi
+

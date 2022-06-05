@@ -1,0 +1,9 @@
+;;; key = 7
+
+.data
+Num_Str DWORD 5
+Cipher_Str BYTE "814039670", 0
+			BYTE "597865494", 0
+			BYTE "012345678", 0
+			BYTE "000000000", 0
+			BYTE "987654321", 0

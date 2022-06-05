@@ -1,0 +1,12 @@
+#!/bin/bash
+
+var=$(echo $* | sed 's/ /|/g')
+
+if [ $# -eq 0 ]
+then
+	echo "Usage: phone searchfor [...searchfor]"
+	echo "(You didn't tell me what you want to search for.)"
+else
+	cat data | egrep -i "$var" | awk 'BEGIN {FS="|"}; {print "---------->" "\nname: " $1 "\naddress: " $2 "\nphone: " $3 "\n<----------" }'
+fi
+
